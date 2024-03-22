@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #333;
+}
+
+/* FILM TYPES */
+.menu {
+  display: flex;
+  gap: 0 10px;
+  position: relative;
+  z-index: 2;
+  min-width: 400px;
+  /* width: 250px;  primary tutorial value*/
+  /* overflow: hidden; */
+}
+
+.menu > a {
+  flex-shrink: 0;
+  flex-grow: 1;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid white;
+}
+
+.menu .dropdown {
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 120px;
+  position: relative;
+}
+
+.menu .dropdown button {
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  color: white;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.menu .dropdown nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms all;
+}
+
+.menu .dropdown nav a {
+  display: flex;
+  height: 34px;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #000;
+}
+
+.menu .dropdown:focus-within nav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+/* SONG BOXES */
+.boxes {
+  display: flex;
+  min-width: 400px;
+}
+
+.boxes .box {
+  width: 200px;
+  background-color: rgb(99, 23, 23);
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.boxes .box::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.boxes .box span {
+  color: white;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
