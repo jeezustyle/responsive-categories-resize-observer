@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +11,10 @@
 }
 
 body {
-  background-color: #333;
+  background: linear-gradient(#201258, #121212);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
 }
 
 /* FILM TYPES */
@@ -34,8 +39,17 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  border: 2px solid white;
+  border: 2px solid #af182c;
+  transition: 300ms all;
+  font-size: 20px;
 }
+
+.menu > a:hover {
+  box-shadow: 0 0 20px #af182c;
+}
+/* menu > a:hover {
+  transform: scale(1.2);
+} */
 
 .menu .dropdown {
   flex-shrink: 0;
@@ -54,8 +68,13 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  border: 2px solid white;
+  border: 2px solid #af182c;
   cursor: pointer;
+  transition: 300ms all;
+}
+
+.menu .dropdown button:hover {
+  box-shadow: 0 0 30px #af182c;
 }
 
 .menu .dropdown nav {
@@ -63,7 +82,7 @@ body {
   top: 100%;
   right: 0;
   width: 100%;
-  background-color: #fff;
+  background: #4622d6;
   border: 2px solid #333;
   border-radius: 5px;
   opacity: 0;
@@ -77,7 +96,7 @@ body {
   align-items: center;
   padding: 0 10px;
   font-size: 14px;
-  color: #000;
+  color: #fff;
 }
 
 .menu .dropdown:focus-within nav {
@@ -87,6 +106,14 @@ body {
 }
 
 /* SONG BOXES */
+h1 {
+  font-family: 'Sedan SC', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #af2274;
+}
+
 .boxes {
   display: flex;
   min-width: 400px;
@@ -94,11 +121,60 @@ body {
 
 .boxes .box {
   width: 200px;
-  background-color: rgb(99, 23, 23);
   position: relative;
   flex-shrink: 0;
   flex-grow: 1;
   text-align: center;
+  border: 0.4rem solid transparent;
+  box-shadow: 0 0 20px #4d31be;
+  transition: 0.07s;
+}
+
+.boxes .box:hover {
+  box-shadow: 0 0 20px #4b9bc9;
+  transform: scale(1.05);
+}
+
+/* ALBUM BACKGROUND */
+h1 + .boxes .box:nth-child(1) {
+  background: center/80% url('./images/music1.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(2) {
+  background: center/80% url('./images/music2.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(3) {
+  background: center/80% url('./images/music3.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(4) {
+  background: center/80% url('./images/music4.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(5) {
+  background: center/80% url('./images/music5.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(6) {
+  background: center/80% url('./images/music6.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(7) {
+  background: center/80% url('./images/music7.jpeg') no-repeat;
+  cursor: pointer;
+}
+h1 + .boxes .box:nth-child(8) {
+  background: center/80% url('./images/music8.jpeg') no-repeat;
+  cursor: pointer;
+}
+.boxes:last-of-type .box:nth-child(1) {
+  background: center/80% url('./images/music9.jpeg') no-repeat;
+  cursor: pointer;
+}
+.boxes:last-of-type .box:nth-child(2) {
+  background: center/80% url('./images/music10.jpeg') no-repeat;
+  cursor: pointer;
 }
 
 .boxes .box::before {
@@ -112,7 +188,7 @@ body {
   position: absolute;
   inset: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: flex-end;
   font-size: 2em;
 }
