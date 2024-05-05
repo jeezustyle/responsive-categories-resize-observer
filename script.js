@@ -34,7 +34,6 @@ let html
 
 const ent = ([entry]) => {
   const visibles = Math.floor((entry.contentRect.width - 130) / 130)
-  console.log(visibles)
   html = genres.slice(0, visibles - 1).reduce((acc, curr) => {
     return (acc += `<a href="#">${curr.title}</a>`)
   }, '')
@@ -49,7 +48,6 @@ const ent = ([entry]) => {
     html += `</nav>`
     html += `</div>`
   }
-  console.log(invisibles)
   menu.innerHTML = html
 }
 

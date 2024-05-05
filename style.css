@@ -99,6 +99,10 @@ body {
   color: #fff;
 }
 
+.menu .dropdown nav a:hover {
+  background: #1d0c61;
+}
+
 .menu .dropdown:focus-within nav {
   opacity: 1;
   visibility: visible;
